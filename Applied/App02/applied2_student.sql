@@ -2,9 +2,9 @@
 Databases Applied 2
 applied2_student.sql
 
-student id:
-student name:
-last modified date:
+student id: HHET0002
+student name: Hirun
+last modified date: 5/08/2024
 
 */
 
