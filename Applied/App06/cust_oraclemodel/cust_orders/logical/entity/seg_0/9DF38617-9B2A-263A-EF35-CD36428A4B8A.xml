@@ -1,0 +1,77 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="9DF38617-9B2A-263A-EF35-CD36428A4B8A" name="PRODUCT">
+<createdBy>Hirun</createdBy>
+<createdTime>2024-08-28 07:20:02 UTC</createdTime>
+<ownerDesignName>cust_orders</ownerDesignName>
+<engineerTo>
+<item key="6E29DEF9-4FA8-1485-7D35-173B306F75F6" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="prod_no" id="E197B8A5-36CC-103F-D0A3-8E8618FD2C31">
+<createdBy>Hirun</createdBy>
+<createdTime>2024-08-28 07:20:18 UTC</createdTime>
+<commentInRDBMS><![CDATA[product number]]></commentInRDBMS>
+<ownerDesignName>cust_orders</ownerDesignName>
+<engineerTo>
+<item key="6E29DEF9-4FA8-1485-7D35-173B306F75F6" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>4</dataTypeSize>
+<ownDataTypeParameters>4,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="prod_description" id="BDD6BFD5-4C30-90CE-625A-6A5C0B158C93">
+<createdBy>Hirun</createdBy>
+<createdTime>2024-08-28 07:21:12 UTC</createdTime>
+<commentInRDBMS><![CDATA[product description]]></commentInRDBMS>
+<ownerDesignName>cust_orders</ownerDesignName>
+<engineerTo>
+<item key="6E29DEF9-4FA8-1485-7D35-173B306F75F6" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50</dataTypeSize>
+<ownDataTypeParameters>50,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="pcat_id" id="630D0D6A-EE9D-28C0-3C30-377DF4213920">
+<createdBy>Hirun</createdBy>
+<createdTime>2024-08-28 07:31:58 UTC</createdTime>
+<commentInRDBMS><![CDATA[product category id]]></commentInRDBMS>
+<generatorID>76291549-61B1-4F57-FDC2-67EB3176D4B5</generatorID>
+<ownerDesignName>cust_orders</ownerDesignName>
+<engineerTo>
+<item key="6E29DEF9-4FA8-1485-7D35-173B306F75F6" value="true"/>
+</engineerTo>
+<referedAttribute>AD1C5038-5EFC-96EE-19F0-00DBE79BFE09</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>4</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="1E74A0EE-4C80-FE5D-4641-84B882E70EA6" name="PRODUCT PK">
+<createdBy>Hirun</createdBy>
+<createdTime>2024-08-28 07:21:04 UTC</createdTime>
+<ownerDesignName>cust_orders</ownerDesignName>
+<engineerTo>
+<item key="6E29DEF9-4FA8-1485-7D35-173B306F75F6" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>E197B8A5-36CC-103F-D0A3-8E8618FD2C31</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

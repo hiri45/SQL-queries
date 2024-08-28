@@ -1,0 +1,80 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="CADE8146-2196-1F55-4655-D97ADE950DED" name="PRODUCT">
+<createdBy>Hirun</createdBy>
+<createdTime>2024-08-28 07:33:24 UTC</createdTime>
+<generatorID>9DF38617-9B2A-263A-EF35-CD36428A4B8A</generatorID>
+<ownerDesignName>cust_orders</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="prod_no" id="1814534E-71EB-B708-536D-B2B26964AC44">
+<createdBy>Hirun</createdBy>
+<createdTime>2024-08-28 07:33:24 UTC</createdTime>
+<commentInRDBMS><![CDATA[product number]]></commentInRDBMS>
+<generatorID>E197B8A5-36CC-103F-D0A3-8E8618FD2C31</generatorID>
+<ownerDesignName>cust_orders</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>4</dataTypeSize>
+<ownDataTypeParameters>4,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="prod_description" id="0290BFAA-4632-4A24-EAD2-A76903C83E3D">
+<createdBy>Hirun</createdBy>
+<createdTime>2024-08-28 07:33:24 UTC</createdTime>
+<commentInRDBMS><![CDATA[product description]]></commentInRDBMS>
+<generatorID>BDD6BFD5-4C30-90CE-625A-6A5C0B158C93</generatorID>
+<ownerDesignName>cust_orders</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50</dataTypeSize>
+<ownDataTypeParameters>50,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="pcat_id" id="6B09DCE0-60EC-AAFE-CB08-BC05565B2333">
+<createdBy>Hirun</createdBy>
+<createdTime>2024-08-28 07:33:24 UTC</createdTime>
+<commentInRDBMS><![CDATA[product category id]]></commentInRDBMS>
+<generatorID>630D0D6A-EE9D-28C0-3C30-377DF4213920</generatorID>
+<ownerDesignName>cust_orders</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>4</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="670AFEBC-A009-B1F0-83A3-377AA1D94C47" referredColumn="B8257A00-1376-BA0B-F33B-9FD1353F9BCA"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="FFD6A0EC-EC59-9915-E365-2F58C09173A1" name="PRODUCT_PK">
+<createdBy>Hirun</createdBy>
+<createdTime>2024-08-28 07:33:24 UTC</createdTime>
+<generatorID>1E74A0EE-4C80-FE5D-4641-84B882E70EA6</generatorID>
+<ownerDesignName>cust_orders</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="1814534E-71EB-B708-536D-B2B26964AC44"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="FA9BF203-BD02-E48D-6A3A-1D269EE9A71E" name="Relation_7">
+<createdBy>Hirun</createdBy>
+<createdTime>2024-08-28 07:33:24 UTC</createdTime>
+<generatorID>76291549-61B1-4F57-FDC2-67EB3176D4B5</generatorID>
+<ownerDesignName>cust_orders</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="6B09DCE0-60EC-AAFE-CB08-BC05565B2333"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

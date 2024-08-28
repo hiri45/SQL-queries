@@ -1,0 +1,79 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="0875028D-023B-D8A2-B7FF-28B387DB818A" name="ORDERS">
+<createdBy>Hirun</createdBy>
+<createdTime>2024-08-28 07:33:24 UTC</createdTime>
+<generatorID>C7F564B2-E960-5713-F83C-A228E8C9001B</generatorID>
+<ownerDesignName>cust_orders</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="order_no" id="6D45F957-6A7B-7D1B-3BF8-D25A257EA13A">
+<createdBy>Hirun</createdBy>
+<createdTime>2024-08-28 07:33:24 UTC</createdTime>
+<commentInRDBMS><![CDATA[order number]]></commentInRDBMS>
+<generatorID>63ED54CD-C837-B2C4-E646-B646B4840AC3</generatorID>
+<ownerDesignName>cust_orders</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>7</dataTypePrecision>
+<ownDataTypeParameters>,7,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="order_date" id="48140C12-7E7C-0B2C-58E8-10C8E654162B">
+<createdBy>Hirun</createdBy>
+<createdTime>2024-08-28 07:33:24 UTC</createdTime>
+<commentInRDBMS><![CDATA[order date]]></commentInRDBMS>
+<generatorID>C4E29BB4-2973-71B8-E7F9-F7B1CD5BB0E9</generatorID>
+<ownerDesignName>cust_orders</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="cust_no" id="AD83424F-2833-8659-1085-1583A101E2F4">
+<createdBy>Hirun</createdBy>
+<createdTime>2024-08-28 07:33:24 UTC</createdTime>
+<commentInRDBMS><![CDATA[customer number]]></commentInRDBMS>
+<generatorID>36696E01-E8AB-6128-74C2-3F5E84F425C6</generatorID>
+<ownerDesignName>cust_orders</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>7</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="8ACAE68B-1762-52AD-2C7C-0E4E4BE35D10" referredColumn="8EDCDB3E-F2F2-0B73-8D44-9D99F92BC6C1"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="901302CA-A286-E5F1-D026-E628DB92CE1C" name="ORDERS_PK">
+<createdBy>Hirun</createdBy>
+<createdTime>2024-08-28 07:33:24 UTC</createdTime>
+<generatorID>74D044B8-D23C-4197-A3D7-457BD20A966D</generatorID>
+<ownerDesignName>cust_orders</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="6D45F957-6A7B-7D1B-3BF8-D25A257EA13A"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="FF5F2023-0F2D-2EA1-6D3C-2046B8BDB32B" name="cust_orders_fk">
+<createdBy>Hirun</createdBy>
+<createdTime>2024-08-28 07:33:24 UTC</createdTime>
+<generatorID>E04EE8A7-E938-3AB3-F25B-8FCCE3E4E830</generatorID>
+<ownerDesignName>cust_orders</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="AD83424F-2833-8659-1085-1583A101E2F4"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>
