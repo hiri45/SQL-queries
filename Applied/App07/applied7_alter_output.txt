@@ -1,0 +1,75 @@
+SQL> drop table course cascade CONSTRAINTS purge;
+
+Table dropped.
+
+SQL> drop table unit_course cascade constraints purge;
+
+Table dropped.
+
+SQL> --  Add a new column to the UNIT table which will represent credit points 
+SQL> --  for the unit (hint use the ALTER command). The credit points for a unit must be 
+SQL> --  either 3, 6 or 12. The default value should be 6 points.
+SQL> ALTER TABLE unit ADD(
+  2      unit_credit_points NUMBER(2) default 6 NOT NULL
+  3      CONSTRAINT chk_unit_credit_points CHECK (unit_credit_points in ('3','6','12'))
+  4  );
+
+TABLE altered.
+
+SQL> COMMENT ON COLUMN unit.unit_credit_points IS
+  2      'Unit credit points, default 6';
+Comment created.
+
+SQL> CREATE TABLE course (
+  2      course_code CHAR(5) NOT NULL,
+  3      course_name VARCHAR2(40) NOT NULL,
+  4      course_total_credit NUMBER(3) NOT NULL
+  5  );
+
+TABLE created.
+
+SQL> ALTER TABLE course ADD CONSTRAINT course_pk PRIMARY KEY (course_code);
+
+TABLE altered.
+
+SQL> COMMENT ON COLUMN course.course_code IS
+  2      'course code, primary key';
+Comment created.
+
+SQL> COMMENT ON COLUMN course.course_name IS
+  2      'course name';
+Comment created.
+
+SQL> COMMENT ON COLUMN course.course_total_credit IS
+  2      'course total credit points';
+Comment created.
+
+SQL> CREATE TABLE unit_course (
+  2      course_code CHAR(5) NOT NULL,
+  3      unit_code CHAR(7) NOT NULL
+  4  );
+
+TABLE created.
+
+SQL> ALTER TABLE unit_course ADD CONSTRAINT unit_course_pk PRIMARY KEY (course_code,unit_code);
+
+TABLE altered.
+
+SQL> ALTER TABLE unit_course ADD CONSTRAINT unit_course_unit_fk FOREIGN KEY (unit_code) REFERENCES unit (unit_code);
+
+TABLE altered.
+
+SQL> ALTER TABLE unit_course ADD CONSTRAINT unit_course_course_fk FOREIGN KEY (course_code) REFERENCES course (course_code);
+
+TABLE altered.
+
+SQL> COMMENT ON COLUMN unit_course.course_code IS
+  2      'unit course, course code';
+Comment created.
+
+SQL> COMMENT ON COLUMN unit_course.unit_code IS
+  2      'unit course unit code';
+Comment created.
+
+SQL> spool off
+
